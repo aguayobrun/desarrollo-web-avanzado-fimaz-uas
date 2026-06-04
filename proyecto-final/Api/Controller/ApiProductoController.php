@@ -16,7 +16,7 @@ class ApiProductoController {
     public function verificarToken(): void {
     $token = $_SERVER['HTTP_X_API_KEY'] ?? '';
 
-    if ($token !== 'mi_token_secreto') {
+    if ($token !== 'tk_tienda2026$') {
         http_response_code(401);
         echo json_encode(['error' => 'Token de autenticación inválido']);
         exit();
